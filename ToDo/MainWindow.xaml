@@ -42,6 +42,16 @@
             <StackPanel Grid.Column="0">
                 <TextBlock Text="Projects" FontSize="16" Margin="25,15,20,5"/>
                 <Rectangle Fill="Gray" Height="3" RadiusX="1" RadiusY="1" Margin="20, 5"/>
+
+                <StackPanel Margin="10">
+                    <custom_controll:project_header Project_Title="Teset 2"/>
+                    <custom_controll:project_header />
+                    <custom_controll:project_header />
+                    <custom_controll:project_header />
+                    <custom_controll:project_header />
+                    <custom_controll:project_header />
+                </StackPanel>
+                
             </StackPanel>
 
             <!-- Task list -->
