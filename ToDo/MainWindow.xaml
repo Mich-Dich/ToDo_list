@@ -5,21 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDo"
         xmlns:custom_controll="clr-namespace:ToDo.View"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="1000" Width="1600" Foreground="White" FontSize="12">
+        mc:Ignorable="d" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Title="MainWindow" Height="1000" Width="1600" Background="#1a1a1a" Foreground="White" FontSize="12">
 
-    <Window.Background>
-        <SolidColorBrush Color="#1a1a1a" />
-    </Window.Background>
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0" />
+    </WindowChrome.WindowChrome>
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
+            <RowDefinition Height="60" />
             <RowDefinition />
         </Grid.RowDefinitions>
         
         <custom_controll:menu_bar/>
-        
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="90">
+            <Button x:Name="BU_minimize" Content="_" Width="20" Height="20" BorderBrush="Transparent" Background="Transparent" Foreground="White"
+                Click="BU_minimize_Click" Margin="5" />
+            <Button x:Name="BU_maximize" Content="O" Width="20" Height="20" BorderBrush="Transparent" Background="Transparent" Foreground="White"
+                Click="BU_maximize_Click" Margin="5" />
+            <Button x:Name="BU_close" Content="X" Width="20" Height="20" BorderBrush="Transparent" Background="Transparent" Foreground="White"
+                Click="BU_close_Click" Margin="5" />
+        </StackPanel>
+
         <Grid Grid.Row="1">
 
             <Grid.RowDefinitions>
